@@ -1,0 +1,85 @@
+
+/*
+ * Program for Steel Tube Calculation 
+ * 
+ * 21/02/2022
+ * 
+ */
+
+package main;
+
+import java.util.Scanner;
+
+public class TubeCalculation {
+
+	public static void main(String[] args)
+	{
+		
+		/*
+		 * Ask for inner Radius and store.
+		 */
+		
+		Scanner sc = new Scanner(System.in);
+			
+		//Ask user for decimal number.
+		System.out.println("Please enter a decimal number for the inner radius");
+		
+		double inradius;
+		
+		inradius = sc.nextDouble();
+		//read and report back what has been inputed
+		System.out.println("The inner Radius is " + inradius); 
+		
+		/*
+		 * Ask for Outer Radius and store.
+		 */
+		//Ask user for decimal number.
+		System.out.println("Please enter a decimal number for the Outer radius");
+		
+		double outradius; 
+		
+		outradius = sc.nextDouble();
+		//read and report back what has been inputed
+		System.out.println("The outer Radius is " + outradius); 
+	
+	
+		/*
+		 * Ask for Height and store.
+		 */
+		
+		System.out.println("Please enter a decimal number for the height");
+	
+		double height; 
+	
+		height = sc.nextDouble();
+	
+		System.out.println("The height is " + height); 
+
+		/*
+		 * Calculating volume of both of the cylinders and taking them away from each other
+		 */
+		//Store volume of outer and inner cylinder
+		double Vol;
+		double Vol2;
+		
+		// Formula for Cylinder Volume (Pi x R^2 x H)
+		
+		// PI times Inside radius to the power of 2 times Height.
+		Vol = (Math.PI * Math.pow(inradius, 2)) * height ;
+
+		// PI times Outside radius to the power of 2 times Height.
+		Vol2 = (Math.PI * Math.pow(outradius, 2)) * height ;
+	
+		// Store answer	
+		double Ans;
+		
+		//calculate total Volume, Volume 2 - Volume 1
+		Ans = (Vol2-Vol);
+		
+		//Tell user answer
+		System.out.println("The Volume of the tube is " + Ans); 
+		
+		sc.close();  
+				
+		} //End main
+	} //End Class

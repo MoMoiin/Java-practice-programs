@@ -1,0 +1,64 @@
+/*
+ * Program for Traffic lights
+ * 
+ * 02/03/2022
+ * 
+ */
+
+package main;
+
+import java.util.Scanner;
+
+public class Trafficlights {
+	public static void main(String[] args) {
+
+		//Tell the user what color is which and ask them to choose a number.
+		Scanner scan = new Scanner(System.in); 
+
+		System.out.println(""
+				+ "Traffic Lights\r\n"
+				+ "1 = Red\r\n"
+				+ "2 = Amber\r\n"
+				+ "3 = Green\r\n"
+				+ "Choose a number between 1 and 3 ? "); 
+		
+		//Capture the inputed information. Close the scanner to avoid resource leak.
+		 String Input = scan.next(); 
+		 scan.close();
+		 
+		 		//Use stored number to check if it fits between 1-3 inclusive.
+		 		boolean flag = Input.matches("[1-3]");{
+		 				
+		 			// If number a doesn't match create a false flag1.
+		 				if (flag) {
+		 						if (Integer.parseInt(Input) < 0
+		 									|| Integer.parseInt(Input) > 4) {
+		 									flag = false;
+		 								}
+		 						
+		 						//If number matches 1 Print Traffic lights are red.
+		 						if (Integer.parseInt(Input) == 1) {
+		 							System.out.println("The traffic lights are RED");
+		 						}
+		 						
+		 						//If number matches 2 Print Traffic lights are amber.
+		 						if (Integer.parseInt(Input) == 2) {
+		 							System.out.println("The traffic lights are AMBER");
+		 						}
+		 						
+		 						//If number matches 3 Print Traffic lights are green.
+		 						if (Integer.parseInt(Input) == 3) {
+		 							System.out.println("The traffic lights are GREEN");
+		 						}
+		 				}
+		 				
+		 				
+		 	// Use False flag1 to print Error message.		
+		 	if (!flag) {
+		 			System.out.println("ERROR: Program values should be between 1 and 3 inclusive");
+		 			System.exit(-1);
+		 							}
+		 		}
+		 		
+	} // End Main
+} // End Class

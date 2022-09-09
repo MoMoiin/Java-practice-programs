@@ -1,0 +1,51 @@
+package coin;
+
+/*
+ * Program for Coin Toss
+ * 
+ * 11/04/2022
+ * 
+ */
+package coin;
+import java.lang.Math;
+public class Coin {
+	private static final int Flip = 1000;
+	private static final int No = 2;
+	
+	
+	public static void main(String[] args) {
+	int myNo = 0;
+	int count = 0;
+	int tails = 0;
+	
+	// Print out amount of times the coin will be flipped.
+	System.out.println("*Tossing coin "+ Flip + " times*");
+	
+	// Get answer from flip and determine if it is Heads or tails.
+	for(int b = 0; b < Flip; b++) {
+		myNo = getRandomNumber(No);
+		for (int coin = 0; coin < myNo; coin ++) {
+			if(coin == 1) {
+				count++;
+			}else {
+				tails++;
+			}
+		}
+	}
+	// Print out the amount of Heads and Tails gotten.
+	System.out.println("=========================" );
+	System.out.println(" *The Heads count is* " +"\n" + "          "+count );
+	System.out.println(" *The Tail count is*" +"\n" + "          " +(tails - count) );
+	System.out.println("=========================" );
+	}
+		
+	
+	
+	// Flip coin and return the answer.
+		private static int getRandomNumber(int A) {
+			int x;
+			x = (int) ((Math.random() * A) + 1);
+			return x;
+		}//End main	
+	}//End Class
+

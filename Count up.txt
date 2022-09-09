@@ -1,0 +1,63 @@
+import java.util.Scanner;
+
+
+public class CountUp {
+
+	
+	public static void main(String args[]) {
+		
+		Scanner scan = new Scanner(System.in); 
+		System.out.println("This is the start");
+		
+		System.out.println("Enter number:");
+		int d = scan.nextInt();
+		countUp(d);
+		scan.close();
+		
+	}
+
+	private static boolean countUp(int i ) {
+		int c = i + 20;
+		
+		for (;i<c; i++) { 
+			System.out.print(i + 1 + " " );			
+			
+		}		
+		return (true);
+	}
+}
+
+
+
+int AddUp100(int i) {
+
+    int b = i - i;
+	 for ( int f = 0; f < 100; f++){
+	    	
+	  i++;
+	  b = b + i;
+          
+
+    
+	      }
+	     return (b);
+	     
+}
+
+
+
+
+
+
+
+boolean printToN(int i, int L){
+    if (L<0){
+        return(false);
+        
+    }
+ for( int f = 0; f < L; f++){
+         i++;
+         System.out.print(i + "\n"); }
+
+    return (true);
+}

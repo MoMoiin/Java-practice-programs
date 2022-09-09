@@ -1,0 +1,53 @@
+/*
+ * Program for array of numbers
+ * 
+ * 29/03/2022
+ * 
+ */
+package get;
+import java.util.*;
+import java.util.Scanner;
+
+public class Getmax {
+	
+
+	static int[] Get = new int[]{1950, 1954, 1900, 1931 , 1912, 1991, 1931, 1921, 1910, 1921, 1914, 1987, 2050, 1778, 1657, 3000, 1,245, 1655, 2210, 1987 };
+
+			public static void main(String args[]) {
+    	
+// 1 print out the list of the numbers (1 marks)    
+    	
+		System.out.println(Arrays.toString(Get));
+
+// 2 print out the latest/highest year (3 marks)
+    	
+		int max = Get[0];{
+		for(int i = 1; i < Get.length;i++) { if(Get[i] > max)
+		max = Get[i];}
+	System.out.println("The Highest year is:" + max);
+		}
+	
+// 3 ask the user for a number and print it out if it is in there or not (6 marks)
+	
+System.out.println("Write the year:");
+Scanner scan = new Scanner(System.in); 
+int f = scan.nextInt();
+int toFind = f;
+boolean found = false;
+scan.close();
+for (int n : Get) {
+	if (n == toFind) {
+found = true;
+break;
+		}
+}
+    
+if(found)
+	System.out.println(toFind + " is found.");
+else
+	System.out.println(toFind + " is not found.");
+																	
+																	
+    
+    	}// End Main
+    }// End Class

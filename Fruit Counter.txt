@@ -1,0 +1,46 @@
+/*
+ * Program for Fruit counter
+ * 
+ * 26/04/2022
+ * 
+ */
+
+package main;
+public class Q4 {
+	    
+	    
+	    public static void main(String[] args)
+	    {
+	        // 1 = apple, 2=orange, 3=pear
+	    	// The production line \\
+	        String productionLine = 
+	        	  "2,3,2,3,2,2,3,1,3,3,1,1,1,2,3,3,2,\r\n"
+	        	+ "2,1,1,3,3,2,1,3,1,2,1,3,1,1,1,3,1,\r\n"
+	        	+ "3,1,3,1,3,3,2,2,2,2,1,1,2,3,2,3,1,\r\n"
+	        	+ "1,2,2,1,3,3,1,1,3,3,3,3,3,3,1,2,1,\r\n"
+	        	+ "3,2,1,2,3,1,2,3,3,2,1,2,3,2,1,1,3,\r\n"
+	        	+ "3,3,1,1,2,1,2,3,1,3,1,1,2,3,2\r\n";
+	        		
+	        
+	        //Count how much of each number there is.
+	        System.out.println("The Production is: \r\n" + productionLine);
+	        int ap = productionLine.length() - productionLine.replace("1", "").length();
+	        int or = productionLine.length() - productionLine.replace("2", "").length();
+	        int pe = productionLine.length() - productionLine.replace("3", "").length();
+	        
+	        //Print out the amount for each.
+	        System.out.println("(Apple = " + ap + ") " + "(Oranges = " + or + ") " + "(Pear = " + pe + ")");
+	        
+	        
+	        //Check which fruit was most common.
+	        if(ap > or && ap > pe) {
+	        	System.out.println("Apples were the most common fruit.");
+	        }else if(or > ap && or > pe) {
+	        	System.out.println("Oranges were the most common fruit.");
+	        }else if(pe > ap && pe > or) {
+	        	System.out.println("Pears were the most common fruit.");
+	        }
+	        
+	          
+		} // End Main
+	} // End Class
